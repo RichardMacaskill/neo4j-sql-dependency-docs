@@ -4,7 +4,7 @@ with row where row._SqlServerInstance_Database_Object_Type = 'Function'
 MERGE (f:Function {Name: row._SqlServerInstance_Database_Object_Name,
                    objectId: row._SqlServerInstance_Database_Object_id
 })
-SET f.url = 'http://localhost:8000/WWI/pc-cas_dev/User_databases/WideWorldImporters/Programmability/Functions/Table-valued_Functions/'
+SET f.url = 'https://cas-testlab-neo4j.co.uk/WWI//pc-cas_dev/User_databases/WideWorldImporters/Programmability/Functions/Table-valued_Functions/'
 + replace(split(row._SqlServerInstance_Database_Object_Name,'.[')[1],']','')
 + '.html';
 
@@ -13,18 +13,18 @@ with row where row._SqlServerInstance_Database_Object_Type = 'Table'
 MERGE (f:Table {Name: row._SqlServerInstance_Database_Object_Name,
                    objectId: row._SqlServerInstance_Database_Object_id
 })
-SET f.url = 'http://localhost:8000/WWI/pc-cas_dev/User_databases/WideWorldImporters/Tables/'
+SET f.url = 'https://cas-testlab-neo4j.co.uk/WWI//pc-cas_dev/User_databases/WideWorldImporters/Tables/'
 + replace(split(row._SqlServerInstance_Database_Object_Name,'.[')[1],']','')
 + '.html';
 
-//http://localhost:8000/WWI/pc-cas_dev/User_databases/WideWorldImporters/Tables/Address.html
+//https://cas-testlab-neo4j.co.uk/WWI//pc-cas_dev/User_databases/WideWorldImporters/Tables/Address.html
 
 LOAD CSV with headers FROM "file:///WorldWideImportersDep.csv" as row
 with row where row._SqlServerInstance_Database_Object_Type = 'Stored Procedure'
 MERGE (f:Procedure {Name: row._SqlServerInstance_Database_Object_Name,
                 objectId: row._SqlServerInstance_Database_Object_id
 })
-SET f.url = 'http://localhost:8000/WWI/pc-cas_dev/User_databases/WideWorldImporters/Programmability/Stored_Procedures/'
+SET f.url = 'https://cas-testlab-neo4j.co.uk/WWI//pc-cas_dev/User_databases/WideWorldImporters/Programmability/Stored_Procedures/'
 + replace(split(row._SqlServerInstance_Database_Object_Name,'.[')[1],']','')
 + '.html';
 
@@ -40,7 +40,7 @@ with row where row._SqlServerInstance_Database_Object_Type = 'View'
 MERGE (f:View {Name: row._SqlServerInstance_Database_Object_Name,
                objectId: row._SqlServerInstance_Database_Object_id
 })
-SET f.url = 'http://localhost:8000/WWI/pc-cas_dev/User_databases/WideWorldImporters/Views/'
+SET f.url = 'https://cas-testlab-neo4j.co.uk/WWI//pc-cas_dev/User_databases/WideWorldImporters/Views/'
 + replace(split(row._SqlServerInstance_Database_Object_Name,'.[')[1],']','')
 + '.html';
 
