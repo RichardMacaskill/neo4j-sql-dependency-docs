@@ -10,3 +10,4 @@ The nodes in the graph also have a property to point to some html documentation,
 The graph can then be viewed in Neo4j Bloom to allow analysis and browsing of the dependencies (as seen below).
 
 ![Bloom image](bloom.png)
+    
